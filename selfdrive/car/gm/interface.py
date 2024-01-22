@@ -151,8 +151,6 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.pid.kf = 1. # for get_steer_feedforward_bolt()
       
       
-      
-      
     else:
       ret.lateralTuning.init('torque')
       ret.lateralTuning.torque.useSteeringAngle = True
@@ -177,9 +175,9 @@ class CarInterface(CarInterfaceBase):
 
     # longitudinal
     ret.longitudinalTuning.kpBP = [0., 18.0 * CV.KPH_TO_MS, 80.0 * CV.KPH_TO_MS] #[0., 18.0 * CV.KPH_TO_MS, 36.0 * CV.KPH_TO_MS, 80. * CV.KPH_TO_MS]
-    ret.longitudinalTuning.kpV = [1.10, 0.97, 0.76] #[1.20, 1.0, 0.76], [1.16, 1.1, 0.76]=>good ==>[1.18, 1.17, 1.0, 0.76]
+    ret.longitudinalTuning.kpV = [1.10, 1.0, 0.76] #[1.20, 1.0, 0.76], [1.16, 1.1, 0.76]=>good ==>[1.18, 1.17, 1.0, 0.76]
     ret.longitudinalTuning.kiBP = [0., 18.0 * CV.KPH_TO_MS, 80.0 * CV.KPH_TO_MS] #[0., 18.0 * CV.KPH_TO_MS, 36.0 * CV.KPH_TO_MS, 80. * CV.KPH_TO_MS]
-    ret.longitudinalTuning.kiV =  [0.140, 0.120, 0.115] #[0.140,0.125,0.115], [0.135, 0.130, 0.115]=> good ==>[0.140, 0.135, 0.130, 0.115]
+    ret.longitudinalTuning.kiV =  [0.140, 0.125, 0.115] #[0.140,0.125,0.115], [0.135, 0.130, 0.115]=> good ==>[0.140, 0.135, 0.130, 0.115]
      
     ret.longitudinalTuning.deadzoneBP = [0., 30.*CV.KPH_TO_MS]
     ret.longitudinalTuning.deadzoneV = [0., 0.10]
