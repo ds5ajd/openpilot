@@ -92,8 +92,6 @@ class CarInterface(CarInterfaceBase):
     ret.restartForceAccel = Params().get_bool('RestartForceAccel')
     ret.openpilotLongitudinalControl = ret.enableGasInterceptor
 
-
-
     tire_stiffness_factor = 0.5
 
     ret.minSteerSpeed = 11 * CV.KPH_TO_MS
